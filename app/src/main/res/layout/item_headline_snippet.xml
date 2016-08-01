@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.nytarticlesearch.bhaskarjaiswal.khabar.models.Article" />
+
+        <variable
+            name="article"
+            type="Article" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvHeadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{article.headline}"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                tools:text="Android" />
+
+            <TextView
+                android:id="@+id/tvSnippet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvHeadline"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:text="@{article.snippet}"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="News about Android (Operating System), including commentary and archival articles published in The New York Times." />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</layout>
